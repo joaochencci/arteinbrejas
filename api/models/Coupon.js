@@ -18,21 +18,6 @@ module.exports = {
 		value: {
 			type: "float",
 			required: true
-		},
-
-		limit: {
-			type: "integer",
-			required: false
-		},
-
-		sold: {
-			type: "integer",
-			required: true
-		},
-
-		expires: {
-			type: "datetime",
-			required: false
 		}
 	}
 };

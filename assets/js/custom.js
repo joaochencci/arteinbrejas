@@ -527,15 +527,6 @@ var $portfolioItems       = $('#portfolio-items'),
         /*  CONTACT FORM                                                                      */
         /*====================================================================================*/
 
-            var nameError         = '<div class="alert-box-error">Please enter your name. <span class="alert-close">x</span></div>',
-                emailError        = '<div class="alert-box-error">Please enter your e-mail address. <span class="alert-close">x</span></div>',
-                invalidEmail      = '<div class="alert-box-error">Please enter a valid e-mail address. <span class="alert-close">x</span></div>',  
-                subjectError      = '<div class="alert-box-error">Please enter the subject. <span class="alert-close">x</span></div>',
-                messageError      = '<div class="alert-box-error">Please enter your message. <span class="alert-close">x</span></div>',
-                mailSuccess       = '<div class="alert-box-success">Your message has been sent. Thank you! <span class="alert-close">x</span></div>',
-                mailResult        = $('#contact-form .result'),
-                i;
-
             $("#contact-form").submit( function() {
                 
                 var form       = $(this);
@@ -546,37 +537,22 @@ var $portfolioItems       = $('#portfolio-items'),
                 });
 
                 $.ajax({
-                    url: 'contact.php',
+                    url: '/subscription/create',
                     type: 'POST',
                     traditional: true,
                     data: formParams,
+
                     success: function(data) {
+
                         var response = jQuery.parseJSON(data);  
 
                         if (response.success) {   
-                            $('#contact-form .result').append(mailSuccess);
+
+                            alert("Assinatura criada com successo... Você vai ser redirecionado para o PayPal");
+                            window.location = "/paypal/redir";
+
                         } else {
-                           for (i=0; i<response.errors.length; i++) {
-                                if (response.errors[i].error == 'empty_name') {                          
-                                    mailResult.append(nameError);
-                                }
-
-                                if (response.errors[i].error == 'empty_email') {                          
-                                    mailResult.append(emailError);
-                                }
-
-                                if (response.errors[i].error == 'empty_subject') {                          
-                                   mailResult.append(subjectError);
-                                }
-
-                                if (response.errors[i].error == 'empty_message') {                          
-                                   mailResult.append(messageError);
-                                }
-
-                                if (response.errors[i].error == 'invalid') {
-                                    mailResult.append(invalidEmail);
-                                }
-                            }
+                           alert("Oops, alguma coisa deu errado. Atualize a página e tente de novo. Você não foi cobrado por isso.")
                         }
                     }
                 })
