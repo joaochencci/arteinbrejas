@@ -10,10 +10,53 @@ module.exports = {
 
 	attributes: {
 		
-		/* e.g.
-		nickname: 'string'
-		*/
+		firstName: {
 
+			type: "string",
+			required: true
+		},
+
+		lastName: {
+
+			type: "string",
+			required: true
+		},
+
+		email: {
+			
+			type: "email",
+			required: true
+		},
+
+		address: {
+			
+			type: "address",
+			required: true
+		},
+
+		cep: {
+			
+			type: "cep",
+			required: true
+		},
+
+		state: {
+			
+			type: "string",
+			required: true
+		},
+
+		city: {
+			
+			type: "string",
+			required: true
+		},
+		
+		type: {
+			
+			type: "string",
+			required: true
+		}
 	}
 
 };

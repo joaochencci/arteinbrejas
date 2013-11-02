@@ -15,6 +15,11 @@ module.exports = {
 			required: true
 		},
 
+		value: {
+			type: "float",
+			required: true
+		},
+
 		limit: {
 			type: "integer",
 			required: false
