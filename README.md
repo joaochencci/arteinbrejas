@@ -1,4 +1,2 @@
-arteinbrejas
-============
-
-StartupWeekend 2013
+# art_breja_new
+### a Sails application
