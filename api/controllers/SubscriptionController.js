@@ -15,6 +15,8 @@
  * @docs        :: http://sailsjs.org/#!documentation/controllers
  */
 
+var humanize = require("humanize");
+
 var subscriptionValues = {
 
 	'plan1': "59",
@@ -42,7 +44,7 @@ module.exports = {
 
 					else {
 
-						Coupon.findByCode(req.param("code")).done(function (err, coupons) {
+						Coupon.findByCode(s.coupon).done(function (err, coupons) {
 
 							if (err || coupons.length == 0) {
 
@@ -53,6 +55,7 @@ module.exports = {
 
 								var val = subscriptionValues[s.type]
 								val = val * coupons[0].value;
+								val = humanize.numberFormat(val, 2);
 
 								res.redirect("/pagseguro/redir?value=" + val);
 								return;
