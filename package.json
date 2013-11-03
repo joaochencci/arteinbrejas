@@ -11,7 +11,9 @@
     "optimist": "0.3.4",
     "sails-mongo": "~0.9.5",
     "util": "~0.4.9",
-    "humanize": "0.0.9"
+    "humanize": "0.0.9",
+    "nodemailer": "~0.5.5",
+    "node-mailer": "~0.1.1"
   },
   "scripts": {
     "start": "node app.js",
