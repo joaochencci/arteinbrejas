@@ -97,7 +97,7 @@
             <div class="pricetable">
                 <ul>
                     <li class="pricetable-title"><h3>DRINKER</h3></li>
-                    <li class="pricetable-price"><h3>$59,00</h3><span>POR MÊS</span></li>
+                    <li class="pricetable-price"><h3>R$ 59,00</h3><span>POR MÊS</span></li>
                     <li class="pricetable-item">DESCONTO ESPECIAL NOS 3 PRIMEIROS MESES</li>
                     <li class="pricetable-item">3 CERVEJAS ARTESANAIS SELECIONADAS TODO MÊS</li>
                     <li class="pricetable-item">&nbsp;</li>
@@ -109,7 +109,7 @@
             <div class="pricetable pricetable-features">
                 <ul>
                     <li class="pricetable-title"><h3>MAKER</h3></li>
-                    <li class="pricetable-price"><h3>$79,00</h3><span>POR MÊS</span></li>
+                    <li class="pricetable-price"><h3>R$ 79,00</h3><span>POR MÊS</span></li>
                     <li class="pricetable-item">KIT BÁSICO PARA FAZER AS PRÓPRIAS CERVEJAS</li>
                     <li class="pricetable-item">2 CERVEJAS ARTESANAIS SELECIONADAS TODO MÊS</li>
                     <li class="pricetable-item">UM INGREDIENTE TODO MÊS</li>
@@ -147,17 +147,24 @@
 
         <div class="titles">
             <i class="icon-phone"></i>
-            <h1>CONTACT US</h1>
+            <h1>ASSINE AGORA</h1>
         </div><!--/.titles -->
 
         <div class="span6">
-            <form id="contact-form" class="contact-form" method="post" action="#">
+            <form id="contact-form" class="contact-form" method="get">
                 <div class="result"></div>
-                <input type="text" name="contact[name]" id="name" placeholder="Name *">
-                <input type="text" name="contact[email]" id="email" placeholder="E-mail *">
-                <input type="text" name="contact[subject]" id="subject" placeholder="Subject">
-                <textarea cols="5" rows="5" name="contact[message]" id="message" placeholder="Message *"></textarea>
-                <input type="submit" class="btn-dark" value="SEND">
+                <input type="text" name="name" id="name" placeholder="Nome *" required>
+                <input type="text" name="email" id="email" placeholder="Email *" required>
+                <input type="text" name="address" id="address" placeholder="Endereço *" required>
+                <input type="text" name="cep" id="cep" placeholder="CEP *" required>
+                <input type="text" name="state" id="state" placeholder="Estado *" required>
+                <input type="text" name="city" id="city" placeholder="Cidade *" required>
+				<p>
+					<input type="radio" name="type" id="type-plan1" value="plan1"> <label for="type-plan1">Drinker (R$ 59,00/mês)</label><br>
+					<input type="radio" name="type" id="type-plan2" value="plan2"> <label for="type-plan2">Maker (R$ 79,00/mês)</label>
+				</p>
+                <input type="text" name="coupon" id="coupon" placeholder="Coupon">
+                <input type="submit" class="btn-dark" value="ENVIAR">
             </form><!--/form-->
         </div><!--/.span6 -->
 
