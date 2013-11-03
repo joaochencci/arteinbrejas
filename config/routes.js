@@ -44,6 +44,16 @@ module.exports.routes = {
   '/pagseguro/redir': {
     controller: "pagseguro",
     action: "redir"
+  },
+
+  '/mailer': {
+    controller: "mailer",
+    action: "index"
+  },
+
+  '/mailer/send': {
+    controller: "mailer",
+    action: "send"
   }
 
   /*
