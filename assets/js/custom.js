@@ -527,14 +527,12 @@ var $portfolioItems       = $('#portfolio-items'),
         /*  CONTACT FORM                                                                      */
         /*====================================================================================*/
 
-            $("#contact-form").submit( function() {
+            $("#contact-form").submit(function(e) {
                 
+                e.preventDefault();
+
                 var form       = $(this);
                 var formParams = form.serialize();
-
-                mailResult.find('div').fadeIn('300', function() {
-                    $(this).remove();
-                });
 
                 $.ajax({
                     url: '/subscription/create',
@@ -543,8 +541,6 @@ var $portfolioItems       = $('#portfolio-items'),
                     data: formParams,
 
                     success: function(data) {
-
-                        var response = jQuery.parseJSON(data);  
 
                         if (response && response.id) {   
                             window.location = "/subscription/checkout?id="+response.id;
