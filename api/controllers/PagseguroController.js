@@ -21,7 +21,7 @@ module.exports = {
 	
 	redir: function(req, res) {
 
-		var val = req.param("value");
+		var val = req.param("value") || req.cookies.value;
 
 		if(val.indexOf(".") < 0)
 			val += ".00";

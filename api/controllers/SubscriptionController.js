@@ -57,7 +57,9 @@ module.exports = {
 								val = val * coupons[0].value;
 								val = humanize.numberFormat(val, 2);
 
-								res.redirect("/pagseguro/redir?value=" + val);
+								res.cookie("value", val)
+
+								res.redirect("/pagseguro/redir");
 								return;
 							}
 						});
