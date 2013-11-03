@@ -542,6 +542,8 @@ var $portfolioItems       = $('#portfolio-items'),
 
                     success: function(data) {
 
+                        var response = data;
+
                         if (response && response.id) {   
                             window.location = "/subscription/checkout?id="+response.id;
                         } else {
