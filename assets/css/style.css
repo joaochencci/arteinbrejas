@@ -228,6 +228,7 @@
     input[type="text"], 
     input[type="email"], 
     input[type="password"],
+	p.form-region,
     textarea { 
         color: #888;
         padding: 12px;
@@ -1608,9 +1609,13 @@
 /*  CONTACT FORM                                                                     */
 /*===================================================================================*/
 
-    .contact-form input[type="text"]{
+    .contact-form input[type="text"], .contact-form input[type="email"] {
         width: 100%;
     }
+
+	.contact-form p {
+		width: 100%;
+	}
 
     .contact-form [class*='btn-'] {
         padding-left: 50px;
