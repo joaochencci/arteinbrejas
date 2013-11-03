@@ -528,7 +528,7 @@
         }
 
         .parallax a { 
-            color: #fff;
+            color: #000;
         }
 
 
@@ -569,7 +569,7 @@
 /*===================================================================================*/
 
     .nav {
-        top: -110px;
+        top: -210px;
         left: 0;
         width: 100%;
         z-index: 100;
@@ -728,8 +728,7 @@
             height: 150px;
             line-height: 150px;
             display: inline-block;
-            border: 1px solid #fff;
-            background-color: rgba(255,255,255,0.1);
+            background-color: rgba(255,255,255,0.3);
             letter-spacing: 0.2em;
 
             -webkit-border-radius: 100px;
@@ -739,8 +738,8 @@
 
         .home-btn:hover {
             color: #ffc600;
-            border-color: #ffc600;
-            background-color: rgba(255, 198, 0, 0.1);
+            border-color: transparent;
+            background-color: rgba(0, 0, 0, 0.3);
         }
 
 
