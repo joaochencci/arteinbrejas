@@ -19,8 +19,9 @@ var humanize = require("humanize");
 
 var subscriptionValues = {
 
-	'plan1': "59",
-	'plan2': "79",
+	'plan1': "69",
+	'plan2': "89",
+	'plan3': "119",
 }
 
 module.exports = {

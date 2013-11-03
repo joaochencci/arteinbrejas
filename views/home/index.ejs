@@ -66,7 +66,7 @@
 
         <div class="titles">
             <i class="icon-trophy"></i>
-            <h1>AS CERVEJAS DESSE MÊS</h1>
+            <h1>AS CERVEJAS PREMIUM MAIS PREMIADAS</h1>
         </div><!--/.titles -->
 
         <div class="clients">
@@ -89,31 +89,44 @@
             <h1>NOSSOS PLANOS</h1>
         </div><!--/.titles -->
 
-        <div class="price-wrapper-col2" data-animated="bounceInUp">
+        <div class="price-wrapper-col3" data-animated="bounceInUp">
 
             <div class="pricetable">
                 <ul>
-                    <li class="pricetable-title"><h3>DRINKER</h3></li>
-                    <li class="pricetable-price"><h3>R$ 59,00</h3><span>POR MÊS</span></li>
-                    <li class="pricetable-item">DESCONTO ESPECIAL NOS 3 PRIMEIROS MESES</li>
-                    <li class="pricetable-item">3 CERVEJAS ARTESANAIS SELECIONADAS TODO MÊS</li>
-                    <li class="pricetable-item">&nbsp;</li>
-                    <li class="pricetable-item">SEM TEMPO MÍNIMO DE ADESÃO</li>
-                    <li class="pricetable-btn"><a class="btn btn-dark" href="#assine" onclick="document.getElementById('type-plan1').checked=true">ASSINE</a></li>
+                    <li class="pricetable-title"><h3>STANDARD</h3></li>
+                    <li class="pricetable-price"><h3>R$ 69,00</h3><span>POR MÊS</span></li>
+                    <li class="pricetable-item">DESCONTO ESPECIAL DE 25% NA ADES&Atilde;O</li>
+                    <li class="pricetable-item">3 CERVEJAS ARTESANAIS <br/>SELECIONADAS CUIDADOSAMENTE PARA VOCÊ	</li>
+                    <li class="pricetable-item">- - -</li>
+                    <li class="pricetable-item">SEM TEMPO DE ADESÃO MÍNIMA</li>
+                    <li class="pricetable-btn"><a class="btn btn-dark" href="#assine" onclick="document.getElementById('type-plan1').checked=true">SEJA UM S&Oacute;CIO</a></li>
                 </ul>
             </div><!--/.pricetable-->
 
             <div class="pricetable pricetable-features">
                 <ul>
-                    <li class="pricetable-title"><h3>MAKER</h3></li>
-                    <li class="pricetable-price"><h3>R$ 79,00</h3><span>POR MÊS</span></li>
-                    <li class="pricetable-item">KIT BÁSICO PARA FAZER AS PRÓPRIAS CERVEJAS</li>
-                    <li class="pricetable-item">2 CERVEJAS ARTESANAIS SELECIONADAS TODO MÊS</li>
-                    <li class="pricetable-item">UM INGREDIENTE TODO MÊS</li>
-                    <li class="pricetable-item">4 MESES DE ADESÃO MÍNIMA</li>
-                    <li class="pricetable-btn"><a class="btn btn-yellow" href="#assine" onclick="document.getElementById('type-plan2').checked=true">ASSINE</a></li>
+                    <li class="pricetable-title"><h3>PREMIUM</h3></li>
+                    <li class="pricetable-price"><h3>R$ 89,00</h3><span>POR MÊS</span></li>
+                    <li class="pricetable-item">DESCONTO ESPECIAL DE <strong>25%</strong> NA ADES&Atilde;O</li>
+                    <li class="pricetable-item">3 CERVEJAS ARTESANAIS <strong>PREMIUM</strong> <br/>SELECIONADAS CUIDADOSAMENTE PARA VOCÊ	</li>
+                    <li class="pricetable-item">- - -</li>
+                    <li class="pricetable-item">SEM TEMPO DE ADESÃO MÍNIMA</li>
+                    <li class="pricetable-btn"><a class="btn btn-yellow" href="#assine" onclick="document.getElementById('type-plan2').checked=true">SEJA UM S&Oacute;CIO</a></li>
                 </ul>
-            </div><!--/.pricetable-->
+            </div>
+            
+            <div class="pricetable">
+                <ul>
+                    <li class="pricetable-title"><h3>MAKER</h3></li>
+                    <li class="pricetable-price"><h3>R$ 119,00</h3><span>POR MÊS</span></li>
+                    <li class="pricetable-item">KIT BÁSICO PARA FAZER AS PRÓPRIAS CERVEJAS</li>
+                    <li class="pricetable-item">2 CERVEJAS ARTESANAIS <strong>PREMIUM</strong> <br/>SELECIONADAS CUIDADOSAMENTE PARA VOCÊ	</li>
+                    <li class="pricetable-item">UM INGREDIENTE TODO MÊS</li>
+                    <li class="pricetable-item">3 MESES DE ADESÃO MÍNIMA</li>
+                    <li class="pricetable-btn"><a class="btn btn-dark" href="#assine" onclick="document.getElementById('type-plan2').checked=true">SEJA UM S&Oacute;CIO</a></li>
+                </ul>
+            </div>
+            <!--/.pricetable-->
 
         </div><!--/.price-wrapper-col3-->
 
@@ -156,12 +169,13 @@
                 <input type="text" name="state" id="state" placeholder="Estado *" required>
                 <input type="text" name="city" id="city" placeholder="Cidade *" required>
 				<p class="form-region">
-					<input type="radio" name="type" id="type-plan1" value="plan1" required> <label for="type-plan1">Drinker (R$ 59,00/mês)</label><br>
-					<input type="radio" name="type" id="type-plan2" value="plan2" required> <label for="type-plan2">Maker (R$ 79,00/mês)</label>
+					<input type="radio" name="type" id="type-plan1" value="plan1" required> <label for="type-plan1">Drinker (R$ 69,00/mês)</label><br/>
+					<input type="radio" name="type" id="type-plan2" value="plan2" required> <label for="type-plan2">Maker (R$ 89,00/mês)</label><br/>
+					<input type="radio" name="type" id="type-plan3" value="plan3" required> <label for="type-plan3">Maker (R$ 119,00/mês)</label>
 				</p>
 				<p>Caso você tenha um código de desconto, coloque-o abaixo:</p>
                 <input type="text" name="coupon" id="coupon" placeholder="Coupon">
-                <input type="submit" class="btn-dark" value="ENVIAR">
+                <input type="submit" class="btn-dark" value="ASSINE J&Aacute;!">
             </form><!--/form-->
         </div><!--/.span6 -->
 
