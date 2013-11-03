@@ -1,20 +1,32 @@
-<!-- Declaração do formulário -->  
-<form target="pagseguro" method="post"   
-action="https://pagseguro.uol.com.br/v2/checkout/payment.html">  
+<div style="text-align: center">
+
+    <p>
+        <br /><br />
+    
+        Para continuar, escolha sua forma de pagamento...
+    
+        <br /><br />
+        <br /><br />
+    </p>
+
+
+    <!-- Declaração do formulário -->  
+    <form target="pagseguro" method="post" action="https://pagseguro.uol.com.br/v2/checkout/payment.html">  
       
-    <!-- Campos obrigatórios -->  
-    <input type="hidden" name="receiverEmail" value="luiseduardo14@gmail.com">  
-    <input type="hidden" name="currency" value="BRL">  
+        <!-- Campos obrigatórios -->  
+        <input type="hidden" name="receiverEmail" value="luiseduardo14@gmail.com">  
+        <input type="hidden" name="currency" value="BRL">  
+          
+        <!-- Itens do pagamento (ao menos um item é obrigatório) -->  
+        <input type="hidden" name="itemId1" value="0001">  
+        <input type="hidden" name="itemDescription1" value="Assinatura - Arte in Brejas">
+        <input type="hidden" name="itemAmount1" value="<%- value %>">  
+        <input type="hidden" name="itemQuantity1" value="1"> 
+          
+        <!-- submit do form (obrigatório) -->  
+        <input type="image" name="submit"   
+        src="https://p.simg.uol.com.br/out/pagseguro/i/botoes/pagamentos/120x53-pagar.gif"   
+        alt="Pague com PagSeguro">  
       
-    <!-- Itens do pagamento (ao menos um item é obrigatório) -->  
-    <input type="hidden" name="itemId1" value="0001">  
-    <input type="hidden" name="itemDescription1" value="Assinatura - Arte in Brejas">
-    <input type="hidden" name="itemAmount1" value="<%- value %>">  
-    <input type="hidden" name="itemQuantity1" value="1"> 
-      
-    <!-- submit do form (obrigatório) -->  
-    <input type="image" name="submit"   
-    src="https://p.simg.uol.com.br/out/pagseguro/i/botoes/pagamentos/120x53-pagar.gif"   
-    alt="Pague com PagSeguro">  
-      
-</form>  
+    </form>
+</div>

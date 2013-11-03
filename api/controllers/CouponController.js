@@ -16,39 +16,5 @@
  */
 
 module.exports = {
-
-	validate: function(req, res) {
-
-		if(!req.param("code")) {
-			res.json({
-				result: "error",
-				message: "code not valid"
-			})
-		}
-		else {
-
-			Coupon.findByCode(req.param("code")).done(function (err, coupons) {
-
-				if (err || coupons.length == 0) {
-
-					res.json({
-						result: "error",
-						message: "code not valid"
-					})
-
-				} else {
-
-					res.json({
-						result: "success",
-						message: "valid code!",
-						value: coupons[0].value
-					})
-
-				}
-			});
-
-		}
-
-	}
   
 };

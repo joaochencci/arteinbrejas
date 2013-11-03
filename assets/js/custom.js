@@ -546,11 +546,8 @@ var $portfolioItems       = $('#portfolio-items'),
 
                         var response = jQuery.parseJSON(data);  
 
-                        if (response.success) {   
-
-                            alert("Assinatura criada com successo... Você vai ser redirecionado para o PayPal");
-                            window.location = "/paypal/redir";
-
+                        if (response && response.id) {   
+                            window.location = "/subscription/checkout?id="+response.id;
                         } else {
                            alert("Oops, alguma coisa deu errado. Atualize a página e tente de novo. Você não foi cobrado por isso.")
                         }

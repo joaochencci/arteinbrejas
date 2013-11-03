@@ -36,6 +36,11 @@ module.exports.routes = {
     view: 'home/index'
   },
 
+  '/subscription/checkout': {
+    controller: 'subscription',
+    action: 'checkout'
+  },
+
   '/pagseguro/redir': {
     controller: "pagseguro",
     action: "redir"

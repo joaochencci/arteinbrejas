@@ -10,13 +10,7 @@ module.exports = {
 
 	attributes: {
 		
-		firstName: {
-
-			type: "string",
-			required: true
-		},
-
-		lastName: {
+		name: {
 
 			type: "string",
 			required: true
@@ -30,13 +24,13 @@ module.exports = {
 
 		address: {
 			
-			type: "address",
+			type: "string",
 			required: true
 		},
 
 		cep: {
 			
-			type: "cep",
+			type: "string",
 			required: true
 		},
 
@@ -56,6 +50,12 @@ module.exports = {
 			
 			type: "string",
 			required: true
+		},
+
+		coupon: {
+			
+			type: "string",
+			required: false
 		}
 	}
 
